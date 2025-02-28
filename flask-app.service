@@ -1,0 +1,13 @@
+[Unit]
+Description=My Python Script
+After=network.target
+
+[Service]
+Type=simple
+User=your_user
+WorkingDirectory=/home/ubuntu/flask-app
+ExecStart=/usr/local/bin/python2.7 /home/ubuntu/flask-app/application.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
